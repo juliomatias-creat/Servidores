@@ -1,1 +1,0 @@
-Exemplo de uso de um pacote do node
