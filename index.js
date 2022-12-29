@@ -10,12 +10,19 @@
 
 const {uniq} = require('lodash'); // importou a bib. lodash e desestruturou o método uniq
 
-const array = require('./array') // imprtou o arquivo array.js para dentro do arquivo index.js
-                                 // Nele, já foi exportada a constante array
-console.log(array);
+const {arrayLetras, arrayNumeros} = require('./array') // imprtou o arquivo array.js para dentro do arquivo index.js
+                                 // Nele, já foi exportado o objeto contendo arrayNumeros e arrayLetras
+//console.log(array);
 
-const arrayUnico = uniq(array);
+console.log(arrayNumeros);
+console.log(arrayLetras);
 
-console.log(arrayUnico); // Exibe o conteúdo da constante array, que é a mesma que foi exportada do arquivo array.js
+const arrayUnicoLetras = uniq(arrayLetras);
+const arrayUnicoNumeros = uniq(arrayNumeros);
 
+console.log(arrayUnicoLetras); // Exibe o conteúdo de um elemento do objeto que foi exportado
+                               //do arquivo array.js
+
+console.log(arrayUnicoNumeros);
+//console.log(arrayUnico); 
 
