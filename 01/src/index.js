@@ -4,12 +4,12 @@ const app = express();
 
 const jogadores = ["José", "Maria", "João", "Marcos", "Fernanda"];
 
-let jogadorDaVez = 0;
+let jogadorDaVez = 0; // Inicia um contador em 0 para pegar a posição do primeiro jogador
 
 app.get('/', (req, res) => {
-    const nomeDoJogador = jogadores[jogadorDaVez]
+    const nomeDoJogador = jogadores[jogadorDaVez] // nomeDoJogador armazena a 1° posição 
     
-    jogadorDaVez++
+    jogadorDaVez++ // Pimeiro incremento, passa a valer 1 
     
     if (jogadorDaVez >= jogadores.length) {
     jogadorDaVez = 0;
